@@ -1,0 +1,460 @@
+@charset "UTF-8";
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Noto Serif JP';
+}
+
+nav {
+    width: 100vw;
+    /* background:#333; */
+    /* color:#fff; */
+    text-align: center;
+    position: fixed;
+    padding-right: 150px;
+    position: relative;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: end;
+}
+
+nav ul ul {
+    display: block;
+}
+
+nav ul li {
+    position: relative;
+}
+
+nav ul li a {
+    display: block;
+    text-decoration: none;
+    color: black;
+    padding: 20px 35px;
+    transition: all .3s;
+}
+
+nav ul li li a {
+    padding: 10px 35px;
+}
+
+nav ul li a:hover {
+    color: gray;
+}
+
+nav ul li.has-child::before {
+    content: '';
+    position: absolute;
+    left: 15px;
+    top: 25px;
+    width: 6px;
+    height: 6px;
+    border-top: 2px solid #999;
+    border-bottom: 2px solid #999;
+    border-right: 2px solid #999;
+    transform: rotate(135deg);
+}
+
+nav li.has-child ul {
+    /*絶対配置で位置を指定*/
+    position: absolute;
+    left: 0;
+    margin-left: 0;
+    /*追加*/
+    padding-left: 0;
+    /*追加*/
+    top: 62px;
+    z-index: 4;
+    /*形状を指定*/
+    /* background:#28BFE7; */
+    width: 250px;
+    /*はじめは非表示*/
+    visibility: hidden;
+    opacity: 0;
+    /*アニメーション設定*/
+    transition: all .3s;
+}
+
+nav li.has-child:hover>ul,
+nav li.has-child:active>ul {
+    visibility: visible;
+    opacity: 1;
+}
+
+nav li.has-child ul li a {
+    color: black;
+    border-bottom: solid 1px rgba(11, 11, 11, 0.6);
+}
+
+nav li.has-child ul li:last-child>a {
+    border-bottom: solid 1px rgba(11, 11, 11, 0.6);
+}
+
+nav p {
+    margin-top: 20px;
+}
+
+main {
+    position: relative;
+}
+
+.main_visual {
+    background-image: url(images/ILskills.jpg);
+    width: 80%;
+    height: 80vh;
+    background-size: cover;
+    margin-left: 20%;
+    color: rgb(255, 255, 255);
+}
+
+.main_visual h1 {
+    position: absolute;
+    top: 80%;
+    left: 25%;
+    text-shadow: 2px 2px 2px black;
+}
+
+.sub_visual {
+    height: 30vh;
+    width: 98vw;
+    background-image: url(images/heder_2.png);
+    background-size: cover;
+    margin: 0 auto;
+}
+
+.sub_visual h1 {
+    text-align: center;
+    color: aliceblue;
+    padding-top: 50px;
+    font-size: 2.5rem;
+    text-shadow: 0 4px 30px rgb(125, 125, 252);
+}
+
+.slider {
+    /*横幅94%で左右に余白を持たせて中央寄せ*/
+    width: 60%;
+    margin: 0 auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.slider img {
+    width: 300px;
+    /*スライダー内の画像を60vwにしてレスポンシブ化*/
+    height: auto;
+}
+
+.slider .slick-slide {
+    transform: scale(0.8);
+    /*左右の画像のサイズを80%に*/
+    transition: all .5s;
+    /*拡大や透過のアニメーションを0.5秒で行う*/
+    opacity: 0.5;
+    /*透過50%*/
+}
+
+.slider .slick-slide.slick-center {
+    transform: scale(1);
+    /*中央の画像のサイズだけ等倍に*/
+    opacity: 1;
+    /*透過なし*/
+}
+
+/*矢印の設定*/
+/*戻る、次へ矢印の位置*/
+.slick-prev,
+.slick-next {
+    position: absolute;
+    /*絶対配置にする*/
+    top: 42%;
+    cursor: pointer;
+    /*マウスカーソルを指マークに*/
+    outline: none;
+    /*クリックをしたら出てくる枠線を消す*/
+    border-top: 2px solid #666;
+    /*矢印の色*/
+    border-right: 2px solid #666;
+    /*矢印の色*/
+    height: 15px;
+    width: 15px;
+}
+
+.slick-prev {
+    /*戻る矢印の位置と形状*/
+    left: -1.5%;
+    transform: rotate(-135deg);
+}
+
+.slick-next {
+    /*次へ矢印の位置と形状*/
+    right: -1.5%;
+    transform: rotate(45deg);
+}
+
+body {
+    font-family: 'Noto Serif JP';
+}
+
+.feke {
+    position: relative;
+    width: 95vw;
+
+}
+
+.Fake_div {
+    position: absolute;
+    top: 370px;
+    left: 1vw;
+    width: 95vw;
+    border: solid 1px rgb(255, 0, 0);
+    height: 40vh;
+    z-index: -999;
+}
+
+.fake h2 {
+    margin-left: 150px;
+    width: 30vw;
+    font-size: 2.0rem;
+    
+}
+
+.Fekeimg_p {
+    display: flex;
+    justify-self: center;
+}
+
+.Fake {
+    width: 13vw;
+    height: 50vh;
+    padding-top: 24vh;
+    font-size: 1.5rem;
+}
+
+.Feke_img {
+    width: 30vw;
+    height: 30vw;
+}
+
+.Feke_img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.Feke_p {
+    height: 50vh;
+    width: 50vw;
+    padding-top: 20vh;
+    font-size: 1.5rem;
+}
+
+.jouhouIL {
+    display: flex;
+    margin-left: 1vw;
+    margin-top: 60px;
+}
+
+.IL_img {
+    width: 50vw;
+}
+
+.IL_img img {
+    width: 100%;
+}
+
+.IL_p {
+    width: 45vw;
+    padding-left: 5%;
+    padding-top: 2%;
+    font-size: 1.5rem;
+}
+
+.Mikiwameru {
+    border: solid black 2px;
+    display: flex;
+    font-size: 1.5rem;
+    margin-left: 1vw;
+    width: 95vw;
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+.mikiimg_p {
+    width: 50vw;
+}
+
+.miki_p {
+    padding-left: 4%;
+    margin-top: 2%;
+}
+
+.mikiimg_p img {
+    width: 100%;
+}
+
+.miki_img {
+    padding-top: 20px;
+    padding-left: 7%;
+}
+
+.AI_sent {
+    padding-left: 5%;
+}
+
+.mikiFake {
+    width: 50vw;
+    padding-left: 5%;
+    padding-top: 3%;
+}
+
+.SNS_img {
+    border: solid black;
+    width: 50vw;
+    height: 77.5vh;
+    margin-left: 1vw;
+    margin-top: 10px;
+}
+
+.SNS_img img {
+    width: 100%;
+    object-fit: contain;
+}
+
+.SNS_p {
+    width: 52vw;
+    position: relative;
+    left: 45vw;
+    bottom: 20vh;
+    font-size: 1.5rem;
+}
+
+.SNS_Note {
+    padding-left: 20%;
+}
+
+.SNS_sent {
+    border: solid black;
+    padding-left: 15%;
+    padding-top: 4%;
+    padding-bottom: 60px;
+}
+
+.Protect {
+    border: solid black;
+    margin-left: 1vw;
+    width: 95vw;
+    display: flex;
+}
+
+.Prot_p {
+    margin-left: 8vw;
+    margin-top: 1vw;
+    font-size: 1.5rem;
+}
+
+.Prot_img {
+    width: 36vw;
+    height: 45vh;
+    margin-left: 10vw;
+    margin-top: 2%;
+    margin-bottom: 100px;
+}
+
+
+.Prot_img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.prot_sent {
+    margin-top: 70px;
+    margin-left: 50px;
+    font-size: 1.5rem;
+}
+
+.Ichiran {
+    padding-left: 150px;
+    margin-top: 40px;
+    margin-bottom: 30px;
+    font-size: 1.5rem;
+}
+
+.footer_img {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-bottom: 25px;
+}
+
+.Fake_footer {
+    width: 23vw;
+    height: 14vw;
+}
+
+.Fake_footer img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.IL_footer {
+    width: 23vw;
+    height: 14vw;
+}
+
+.IL_footer img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.miki_footer {
+    width: 23vw;
+    height: 14vw;
+}
+
+.miki_footer img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.SNS_footer {
+    width: 23vw;
+    height: 14vw;
+}
+
+.SNS_footer img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.prot_footer {
+    width: 23vw;
+    height: 13vw;
+}
+
+.prot_footer img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.top_footer {
+    width: 23vw;
+    height: 13vw;
+}
+
+.top_footer img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
